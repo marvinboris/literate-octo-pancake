@@ -1,0 +1,17 @@
+.NavigationItem .underline {
+    opacity: 0;
+    transition: opacity .25s;
+}
+
+.NavigationItem .underline div {
+    width: 32px;
+    height: 4px;
+}
+
+.NavigationItem :not(.active) .underline, .NavigationItem :not(.active) .point {
+    opacity: 0;
+}
+
+.NavigationItem .active .underline, .NavigationItem .active .point {
+    opacity: 1;
+}
