@@ -13,7 +13,7 @@ import CleanForever from '../../assets/images/forever clean logo@2x.png';
 import './Footer.css';
 
 const footer = () => (
-    <div className="Footer text-white">
+    <div className="Footer text-white text-montserrat">
         <footer className="container d-none d-md-block py-5">
             <Row>
                 <Col lg={4}>
@@ -21,9 +21,9 @@ const footer = () => (
                 </Col>
                 <Col>
                     <FooterBlock title="Our Partners">
-                        <img src={Briluce} style={{ width: 90 }} />
-                        <img src={bdTask} style={{ width: 90 }} />
-                        <img src={CleanForever} style={{ width: 90 }} />
+                        <img src={Briluce} style={{ width: 90 }} className="d-inline-block" />
+                        <img src={bdTask} style={{ width: 90 }} className="d-inline-block" />
+                        <img src={CleanForever} style={{ width: 90 }} className="d-inline-block" />
                     </FooterBlock>
                 </Col>
                 <Col lg={4}>
@@ -31,7 +31,7 @@ const footer = () => (
                         <dl className="row">
                             <dl className="col-5 d-flex justify-content-between">
                                 <div>
-                                    <FontAwesomeIcon icon={faPhoneSquareAlt} className="mr-2" fixedWidth /><strong>Office</strong>
+                                    <FontAwesomeIcon icon={faPhoneSquareAlt} className="mr-2 text-limo" fixedWidth /><strong>Office</strong>
                                 </div>
                                 :
                             </dl>
@@ -41,7 +41,7 @@ const footer = () => (
 
                             <dl className="col-5 d-flex justify-content-between">
                                 <div>
-                                    <FontAwesomeIcon icon={faEnvelope} className="mr-2" fixedWidth /><strong>E-mail</strong>
+                                    <FontAwesomeIcon icon={faEnvelope} className="mr-2 text-limo" fixedWidth /><strong>E-mail</strong>
                                 </div>
                                 :
                             </dl>
@@ -52,7 +52,7 @@ const footer = () => (
 
                             <dl className="col-5 d-flex justify-content-between">
                                 <div>
-                                    <FontAwesomeIcon icon={faHeadset} className="mr-2" fixedWidth /><strong>Support</strong>
+                                    <FontAwesomeIcon icon={faHeadset} className="mr-2 text-limo" fixedWidth /><strong>Support</strong>
                                 </div>
                                 :
                             </dl>
@@ -77,7 +77,7 @@ const footer = () => (
         </footer>
         <footer className="container-fluid border-top border-border-50 pb-4">
             <div className="container text-center pt-4">
-                © Copyrights 2020 <span className="text-yellow text-700">GIT S.A</span>. All rights reserved. By <span className="text-700">GIT S.A Developers</span>.
+                © Copyrights 2020 <span className="text-limo text-700">GIT S.A</span>. All rights reserved. By <span className="text-700">GIT S.A Developers</span>.
             </div>
         </footer>
     </div>

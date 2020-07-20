@@ -180,7 +180,7 @@ const Cards = ({ cards }) => cards.map(({ children, img, title, subtitle, link, 
     {children}
 </AppBlock>);
 
-const Team = ({ team }) => team.map(({ children, img, color = 'myprimary', firstname, lastname, job, fb, li, wa, tw }) => <div key={Math.random()} className="p-3">
+const Team = ({ team }) => team.map(({ children, img, color = 'limo', firstname, lastname, job, fb, li, wa, tw }) => <div key={Math.random()} className="p-3">
     <div className="bg-soft rounded p-4">
         <div className="d-flex align-items-center">
             <div className="pr-4">
@@ -194,7 +194,7 @@ const Team = ({ team }) => team.map(({ children, img, color = 'myprimary', first
 
                 <div className="text-secondary mb-2">{job}</div>
 
-                <div style={{ width: 37, height: 8 }} className="rounded-pill bg-myprimary" />
+                <div style={{ width: 37, height: 8 }} className="rounded-pill bg-limo" />
             </div>
         </div>
 
@@ -213,7 +213,7 @@ const Team = ({ team }) => team.map(({ children, img, color = 'myprimary', first
     </div>
 </div>);
 
-const SectionTitle = ({ children, icon, subtitle, color = 'myprimary', small }) => <div className="d-flex align-items-center">
+const SectionTitle = ({ children, icon, subtitle, color = 'limo', small }) => <div className="d-flex align-items-center">
     <div className="pr-4">
         <div style={{ width: 104 }} className={'embed-responsive embed-responsive-1by1 rounded d-flex justify-content-center align-items-center text-' + color + ' bg-' + color + '-30'}>
             <FontAwesomeIcon icon={icon} size="3x" />
@@ -232,11 +232,11 @@ export default class Home extends Component {
             <div className="Home w-100">
                 <div className="position-relative full-height-app d-flex flex-column" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, .61), rgba(0, 0, 0, .61)), url(${BannerImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                     <Container className="flex-fill d-flex flex-column justify-content-center">
-                        <Row className="justify-content-between align-items-center">
+                        <Row className="justify-content-between align-items-center text-montserrat">
                             <Col lg={9}>
                                 <div className="banner-text">
                                     <h4 className="text-700 text-center text-lg-left text-white">Welcome to</h4>
-                                    <h1 className="text-700 text-center d-none d-sm-block text-lg-left text-white">Global Investment Trading S.A</h1>
+                                    <h1 className="text-700 text-center d-none d-sm-block text-lg-left text-white display-4">Global Investment Trading S.A</h1>
                                     <h2 className="text-700 text-center d-sm-none text-lg-left text-white">Global Investment Trading S.A</h2>
 
                                     <div className="w-60 d-none d-lg-block border-top border-lightblue mt-4 pt-4 pb-5 text-secondary">
@@ -248,8 +248,8 @@ export default class Home extends Component {
                                     </div>
 
                                     <div className="text-center text-lg-left">
-                                        <Link className="d-block mx-auto d-lg-inline-block" to="/about-us"><BetweenButton icon={faChevronRight} className="py-3 px-4 mr-lg-2 mb-3 mb-lg-0" color="blue"><span>About <span className="text-700">Us</span></span></BetweenButton></Link>
-                                        <Link className="d-block mx-auto d-lg-inline-block" to="/our-products"><BetweenButton icon={faChevronRight} className="py-3 px-4 text-darkblue" color="soft"><span>Our <span className="text-700">Products</span></span></BetweenButton></Link>
+                                        <Link to="/about-us"><BetweenButton icon={faChevronRight} className="d-block mx-auto d-lg-inline-block py-3 px-4 mr-lg-2 mb-3 mb-lg-0" color="blue"><span>About <span className="text-700">Us</span></span></BetweenButton></Link>
+                                        <Link to="/our-products"><BetweenButton icon={faChevronRight} className="d-block mx-auto d-lg-inline-block py-3 px-4 text-darkblue" color="soft"><span>Our <span className="text-700">Products</span></span></BetweenButton></Link>
                                     </div>
                                 </div>
                             </Col>

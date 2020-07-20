@@ -10,7 +10,7 @@ const appBlock = ({ children, animation = "fade-up", img, title = '', subtitle =
         <div className={`shadow-sm bg-${popular ? `${color}-10` : "white"} position-relative overflow-hidden rounded-4 p-4`} style={{ transform: popular && 'scale(1.05)' }}>
             {popular && <div class={"bg-" + color + " w-100 pt-2 pb-1 text-uppercase text-center text-white position-absolute"} style={{ top: '-20%', right: '-50%', transform: 'rotate(45deg)', transformOrigin: '0 0' }}>MOST POPULAR</div>}
 
-            <div className={`d-flex justify-content-center align-items-center embed-responsive embed-responsive-1by1 mx-auto my-4 rounded-circle border border-${color} shadow-${color}-circle border-3 position-relative p-3`} style={{ width: 108 }}>
+            <div className={`d-flex justify-content-center align-items-center embed-responsive embed-responsive-1by1 mx-auto my-4 bg-white rounded-circle border border-${color} shadow-${color}-circle border-3 position-relative p-3`} style={{ width: 108 }}>
                 <div className="position-absolute w-80 embed-responsive embed-responsive-1by1 rounded-circle d-flex justify-content-center align-items-center" style={{ top: '50%', transform: 'translateY(-50%)' }}>
                     <img src={img} style={{ width: 66 }} />
                 </div>

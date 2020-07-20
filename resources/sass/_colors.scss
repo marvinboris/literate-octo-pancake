@@ -21,7 +21,7 @@ $white: #ffffff;
 $gray: #aaa;
 $black: #000000;
 $light: #cacaca;
-$soft: #e9e9e9;
+$soft: #F6F6F6;
 $darklight: #1b223f;
 $border: #606060;
 $input: #28324c;
@@ -125,7 +125,7 @@ $colors: "green" $mygreen $white, "lemongreen" $mylemongreen $dark, "darkgreen" 
   }
 
   .shadow-#{$name}-circle {
-    box-shadow: 0 0 0 rgba($color, 0.1) !important;
+    box-shadow: 0 0 0 .75rem rgba($color, 0.1) !important;
   }
 
   .btn-#{$name} {

@@ -38,7 +38,7 @@ export default ({ isAuth, name, drawerToggleClicked, logoutHandler, role, cartIt
                         <div className="pl-lg-5">
                             <div className="d-inline-flex align-items-center">
                                 <a href="#language-dropdown" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="language-dropdown" className="text-white text-decoration-none d-none d-sm-flex justify-content-around align-items-center">
-                                    <span className="language-flag shadow-lg mr-2 overflow-hidden justify-content-center align-items-center position-relative">
+                                    <span className="language-flag shadow-lg mr-2 overflow-hidden d-flex justify-content-center align-items-center position-relative">
                                         <span className="flag-icon position-absolute flag-icon-gb"></span>
                                     </span>
                                     <span className="px-2 border-left border-white-20 position-relative">

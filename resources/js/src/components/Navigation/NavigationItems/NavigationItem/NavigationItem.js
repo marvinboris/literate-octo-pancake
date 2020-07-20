@@ -11,8 +11,8 @@ const navigationItem = ({ icon, children, href, className = '', different, font,
         {external ? <a className={'nav-link ' + ('text-' + font) + ' ' + className} href={href} target="_blank" onClick={toggleNavbar}>
             {icon ? <FontAwesomeIcon icon={icon} className="mr-1" /> : null}{children}
         </a> : <NavLink className={'nav-link ' + ('text-' + font) + ' ' + className} to={href} onClick={toggleNavbar} exact={exact} activeClassName={!different ? "text-700 active text-white" : ""}>
-                {icon ? <FontAwesomeIcon icon={icon} className="text-lightblue mr-1" /> : null}{children}<FontAwesomeIcon icon={faCircle} className="ml-1 point text-red text-xx-small" />
-                <div className="underline pt-1">
+                {icon ? <FontAwesomeIcon icon={icon} className="text-lightblue mr-1" /> : null}{children}<FontAwesomeIcon icon={faCircle} className="ml-1 point text-danger text-xx-small" />
+                <div className="underline pt-1" style={{ marginLeft: icon && '1.25rem' }}>
                     <div className="bg-lightblue" />
                 </div>
             </NavLink>}
