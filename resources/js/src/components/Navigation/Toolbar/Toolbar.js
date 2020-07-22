@@ -17,7 +17,7 @@ export default ({ isAuth, name, drawerToggleClicked, logoutHandler, role, cartIt
     return (
         <div className="Toolbar bg-transparent position-absolute border-bottom border-border-50 w-100" style={{ zIndex: 1000 }}>
             <Container>
-                <Navbar dark className="py-4 justify-content-between" expand="md">
+                <Navbar dark className="py-3 justify-content-between" expand="md">
                     <Link to="/" className="navbar-brand"><Logo /></Link>
 
                     <div className="d-none d-xl-flex text-small text-white align-items-center justify-content-center">

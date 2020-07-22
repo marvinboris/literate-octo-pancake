@@ -38,6 +38,7 @@ import CEO from '../../assets/images/1-67@2x.png';
 import Innocent from '../../assets/images/5.-innocent@2x.png';
 
 import MapsBg from '../../assets/images/acf-google-map-field-interface@2x.png';
+import MapPoints from '../../assets/images/Group 659@2x.png';
 
 const images = [
     Limo,
@@ -352,9 +353,25 @@ export default class Home extends Component {
                         </div>
                     </Container>
                 </div>
-            
-                <div style={{ background: `url("${MapsBg}") no-repeat center`, backgroundSize: 'cover' }}>
-                    
+
+                <div style={{ background: `linear-gradient(rgba(0, 0, 0, .61), rgba(0, 0, 0, .61)), url("${MapsBg}") no-repeat center`, backgroundSize: 'cover' }}>
+                    <Container className="vh-100 d-flex flex-column justify-content-center text-white">
+                        <div className="d-flex align-items-center pb-5">
+                            <div className="pr-4">
+                                <div className="bg-white" style={{ height: 93, width: 25 }} />
+                            </div>
+
+                            <div>
+                                <div className="text-700 text-x-large">Want to know more about us?</div>
+
+                                <div>You can contact us via these channels</div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <img src={MapPoints} style={{ height: 284 }} className="mw-100" />
+                        </div>
+                    </Container>
                 </div>
             </div>
         );
