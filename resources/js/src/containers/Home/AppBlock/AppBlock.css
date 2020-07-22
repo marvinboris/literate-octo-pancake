@@ -1,3 +1,12 @@
 .AppBlock .bg-gradient {
     background: transparent linear-gradient(126deg, #CD105C 0%, #67082E 100%) 0% 0% no-repeat padding-box;
 }
+
+.AppBlock .hover {
+    transform: scale(1);
+    transition: transform .25s;
+}
+
+.AppBlock .hover:hover {
+    transform: scale(1.05);
+}

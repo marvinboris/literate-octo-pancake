@@ -10,11 +10,12 @@ import BetweenButton from "../../components/UI/Button/BetweenButton/BetweenButto
 
 import UnderCarouselBlock from "./UnderCarouselBlock/UnderCarouselBlock";
 import AppBlock from "./AppBlock/AppBlock";
-import CustomerBlock from "./CustomerBlock/CustomerBlock";
+import TeamBlock from "./TeamBlock/TeamBlock";
 
 import "./Home.css";
 
 import BannerImg from "../../assets/images/garden-court-sandton-city-facilities-pool-01-1@2x.png";
+import HomeBodyBg from "../../assets/images/Group 658@2x.png";
 
 import Limo from '../../assets/images/LOGO LIMO@2x.png';
 import Limarket from '../../assets/images/logo limarket@2x.png';
@@ -29,9 +30,14 @@ import Liportal from '../../assets/images/Plan de travail 1@4x@2x.png';
 import KingChicken from '../../assets/images/IMG-20200219-WA0046 2@2x.png';
 import LimarketMada from '../../assets/images/LOGO LIMARKET MADAGASCAR POUR SITE@2x.png';
 
+import CEO1 from '../../assets/images/EXLv_LuXgAEHwS8@2x.png';
+import BehindCEO from '../../assets/images/unnamed@2x.png';
+
 import Briand from '../../assets/images/C360_2020-06-13-15-24-50-992@2x.png';
 import CEO from '../../assets/images/1-67@2x.png';
 import Innocent from '../../assets/images/5.-innocent@2x.png';
+
+import MapsBg from '../../assets/images/acf-google-map-field-interface@2x.png';
 
 const images = [
     Limo,
@@ -50,6 +56,14 @@ const images = [
 
 const cards = [
     {
+        img: Limarket,
+        children: <div>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</div>,
+        title: 'Limarket Cameroon',
+        subtitle: 'E-commerce platform',
+        link: 'https://limarket.net',
+        color: 'limarket',
+    },
+    {
         img: Limo,
         children: <div>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</div>,
         title: 'LIMO',
@@ -57,14 +71,6 @@ const cards = [
         link: 'https://liyeplimal.net',
         color: 'limo',
         popular: true,
-    },
-    {
-        img: Limarket,
-        children: <div>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in</div>,
-        title: 'Limarket Cameroon',
-        subtitle: 'E-commerce platform',
-        link: 'https://limarket.net',
-        color: 'limarket',
     },
     {
         img: SimbCoin,
@@ -180,39 +186,6 @@ const Cards = ({ cards }) => cards.map(({ children, img, title, subtitle, link, 
     {children}
 </AppBlock>);
 
-const Team = ({ team }) => team.map(({ children, img, color = 'limo', firstname, lastname, job, fb, li, wa, tw }) => <div key={Math.random()} className="p-3">
-    <div className="bg-soft rounded p-4">
-        <div className="d-flex align-items-center">
-            <div className="pr-4">
-                <div style={{ width: 106, background: 'url("' + img + '") no-repeat center', backgroundSize: 'cover' }} className={"border border-2 border-white rounded-circle embed-responsive embed-responsive-1by1 shadow-" + color + "-circle"} />
-            </div>
-
-            <div>
-                <div className="text-large text-uppercase text-darkblue border-bottom border-border-50 pb-2 mb-2 d-inline-block">
-                    <span className="text-700">{firstname}</span> <span className="text-300">{lastname}</span>
-                </div>
-
-                <div className="text-secondary mb-2">{job}</div>
-
-                <div style={{ width: 37, height: 8 }} className="rounded-pill bg-limo" />
-            </div>
-        </div>
-
-        <div className="mb-3 pt-3 pb-4 border-bottom border-black-20 text-secondary">
-            <div><FontAwesomeIcon icon={faQuoteLeft} size="lg" /></div>
-            <div className="p-2">{children}</div>
-            <div className="text-right"><FontAwesomeIcon icon={faQuoteRight} size="lg" /></div>
-        </div>
-
-        <div className="d-flex justify-content-end text-blue">
-            <div className="px-2"><a href={fb}><FontAwesomeIcon size="2x" icon={faFacebookSquare} /></a></div>
-            <div className="px-2"><a href={li}><FontAwesomeIcon size="2x" icon={faLinkedin} /></a></div>
-            <div className="px-2"><a href={wa}><FontAwesomeIcon size="2x" icon={faWhatsappSquare} /></a></div>
-            <div className="px-2"><a href={tw}><FontAwesomeIcon size="2x" icon={faTwitterSquare} /></a></div>
-        </div>
-    </div>
-</div>);
-
 const SectionTitle = ({ children, icon, subtitle, color = 'limo', small }) => <div className="d-flex align-items-center">
     <div className="pr-4">
         <div style={{ width: 104 }} className={'embed-responsive embed-responsive-1by1 rounded d-flex justify-content-center align-items-center text-' + color + ' bg-' + color + '-30'}>
@@ -282,9 +255,9 @@ export default class Home extends Component {
                     </div>
                 </div>
 
-                <div style={{ backgroundImage: `url(${'HomeBodyBg'})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div style={{ background: `url("${HomeBodyBg}") no-repeat center`, backgroundSize: 'cover' }}>
                     <Container className="vh-100 d-flex flex-column justify-content-center">
-                        <Row className="align-items-center">
+                        <Row className="align-items-center justify-content-between">
                             <Col lg={6}>
                                 <Row className="justify-content-center">
                                     <Col lg={10} data-aos="fade-right">
@@ -299,8 +272,40 @@ export default class Home extends Component {
                                 </Row>
                             </Col>
 
-                            <Col lg={6}>
+                            <Col lg={5} data-aos="fade-left">
+                                <Row className="h-100 align-items-end position-relative">
+                                    <Col lg={9} style={{ zIndex: 2 }}>
+                                        <div className="p-3">
+                                            <div className="rounded embed-responsive embed-responsive-4by3" style={{ background: `url("${CEO1}") no-repeat center`, backgroundSize: 'cover' }} />
+                                        </div>
 
+                                        <div className="bg-white rounded">
+                                            <div className="bg-limo-10 rounded text-secondary p-3">
+                                                <div>
+                                                    <div className="text-uppercase text-montserrat text-blue text-large text-700">{'Simb Emile Parfait'}</div>
+
+                                                    <div className="text-400">C.E.O, Founder and Crypto Trader</div>
+                                                </div>
+
+                                                <div className="my-3 border-bottom border-border" />
+
+                                                <div>
+                                                    <div><FontAwesomeIcon icon={faQuoteLeft} className="text-darkblue" size="lg" /></div>
+                                                    <div className="p-2">{`
+                                                    Produce maximum investment income  with minimal risk 
+                                                    to a wide variety of our clients, using an innovative asset 
+                                                    management approach in the global investment market.
+                                                    `}</div>
+                                                    <div className="text-right"><FontAwesomeIcon icon={faQuoteRight} className="text-darkblue" size="lg" /></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Col>
+
+                                    <Col lg={7} className="position-absolute" style={{ zIndex: 1, top: 0, right: 0 }}>
+                                        <div className="embed-responsive embed-responsive-16by9 rounded" style={{ background: `url("${BehindCEO}") no-repeat center`, backgroundSize: 'cover', transform: 'translateY(-50%)' }} />
+                                    </Col>
+                                </Row>
                             </Col>
                         </Row>
                     </Container>
@@ -339,13 +344,17 @@ export default class Home extends Component {
                         </Row>
                         <div className="py-5">
                             <OwlCarousel ref="Our Team" options={{ responsive: { 0: { items: 1 }, 600: { items: 2 }, 1200: { items: 3 } }, loop: true, dots: true, center: true }}>
-                                <Team team={team} />
+                                <TeamBlock team={team} />
                             </OwlCarousel>
                         </div>
                         <div className="d-flex justify-content-end">
                             <Link className="d-block d-lg-inline-block" to="/about-us#our-team"><BetweenButton icon={faChevronRight} pill className="py-3 px-4 mr-lg-2 mb-3 mb-lg-0" color="blue">View List</BetweenButton></Link>
                         </div>
                     </Container>
+                </div>
+            
+                <div style={{ background: `url("${MapsBg}") no-repeat center`, backgroundSize: 'cover' }}>
+                    
                 </div>
             </div>
         );

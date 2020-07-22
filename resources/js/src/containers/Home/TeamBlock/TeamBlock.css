@@ -1,0 +1,23 @@
+.owl-item .TeamBlock>.rounded {
+    background: #F6F6F6;
+    transition: all .25s;
+}
+
+.owl-item.active.center .TeamBlock>.rounded {
+    background: linear-gradient(rgb(23, 158, 255, .1), rgb(23, 158, 255, .1)) #fff;
+}
+
+.owl-item .TeamBlock .quote {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: #6c757d;
+    transition: all .25s;
+}
+
+.owl-item.active.center .TeamBlock .quote {
+    margin: 0 -1.5rem;
+    padding: 0 1.5rem;
+    background: linear-gradient(#03338D, #03338D) #fff;
+    color: white;
+}
